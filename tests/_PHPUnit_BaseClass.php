@@ -14,7 +14,12 @@ if ( !class_exists('PHPUnit_Framework_TestCase') ) {
 }
 
 // -----------------------------------------------------
-require_once ROOT_DIR . 'vendor/autoload.php';
+if ( file_exists(ROOT_DIR . 'vendor/autoload.php') ) {
+    require_once ROOT_DIR . 'vendor/autoload.php';
+}
+else {
+    require_once ROOT_DIR . 'src/siphash.php';
+}
 // -----------------------------------------------------
 // -----------------------------------------------------
 /**
