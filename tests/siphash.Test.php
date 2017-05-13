@@ -10,9 +10,7 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . '_PHPUnit_BaseClass.php';
 // -----------------------------------------------------
 class TestSipHash extends PHPUnit_BaseClass {
     // -----------------------------------------------------
-    public static $inst;
     public static $className = 'duzun\\SipHash';
-    public static $baseUrl   = 'https://DUzun.Me/';
     public static $log       = true;
 
     // -----------------------------------------------------
