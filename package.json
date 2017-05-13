@@ -1,0 +1,63 @@
+{
+  "name": "siphash.php",
+  "description": "SipHash PHP implementation (-2-4 so far)",
+  "version": "0.0.1",
+  "author": {
+    "name": "Dumitru Uzun",
+    "email": "contact@duzun.me",
+    "url": "https://DUzun.Me"
+  },
+  "homepage": "https://github.com/duzun/SipHash",
+  "keywords": [
+    "SipHash",
+    "hash",
+    "PHP"
+  ],
+  "files": [
+    "src/siphash.php",
+    "README.md",
+    "composer.json",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duzun/SipHash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/duzun/SipHash/issues"
+  },
+  "verup": {
+    "files": [
+      "composer.json",
+      "src/siphash.php",
+      "LICENSE",
+      "README.md"
+    ],
+    "regs": [
+      "((?:\\$|(?:\\s*\\*?\\s*@)|(?:^\\s*(?:var|,)?\\s+))ver(?:sion)?[\\s\\:='\"]+)([0-9]+(?:\\.[0-9]+){2,2})",
+      "^(\\s*const\\s+VERSION[\\s='\"]+)([0-9]+(?:\\.[0-9]+){2,2})",
+      "^(\\s?\\*.*v)([0-9]+(?:\\.[0-9]+){2,2})"
+    ]
+  },
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/duzun/SipHash/raw/master/LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "verup": "*",
+    "watch": "^1.x"
+  },
+  "directories": {
+    "src": "src",
+    "test": "tests"
+  },
+  "scripts": {
+    "verup": "node ./node_modules/verup",
+    "version": "node ./node_modules/verup 0",
+    "preversion": "php vendor/bin/phpunit ./tests/",
+    "test": "php vendor/bin/phpunit ./tests/",
+    "test:watch": "node ./tools/test_watcher.js"
+  }
+}

@@ -1,0 +1,18 @@
+language: php
+
+php:
+  - 7.0
+  - 5.6
+  - 5.5
+  - 5.4
+  - 5.3
+  - nightly
+  - hhvm
+
+matrix:
+    allow_failures:
+        - php: nightly
+
+script: phpunit tests/
+
+sudo: false
