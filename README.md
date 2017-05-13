@@ -1,5 +1,4 @@
 SipHash  [![Build Status](https://travis-ci.org/duzun/SipHash.svg?branch=master)](https://travis-ci.org/duzun/SipHash)
-
 ==========
 
 [SipHash-2-4](https://131002.net/siphash/) implementation written in PHP
